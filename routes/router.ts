@@ -146,7 +146,7 @@ export class router{
         .get((req: Request, res: Response) => {
             this.productController.find_ProductHigherCost(req,res);
         });
-        app.route('/productsByName/:name')
+        app.route('/productsByName/:name/:id_store')
         .get((req: Request, res: Response) => {
             this.productController.find_ProductName(req,res);
         });
@@ -162,7 +162,7 @@ export class router{
         .get((req: Request, res: Response) => {
             this.productController.find_ProductByOff(req,res);
         })  
-        app.route('/productsByOferta')
+        app.route('/productsByOferta/:id_store')
         .get((req: Request, res: Response) => {
             this.productController.find_ProductByOferta(req,res);
         })  
